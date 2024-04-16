@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function showDialog(){
+            alert("안녕하세요");
+        }
+    </script>
+    <script>
+        function greeting(name, position)
+        {
+            alert(name + " " + position + "님을 환영합니다.");
+        }
+    </script>
+</head>
+<body>
+    <h1 id="time">시간:</h1>
+    <h1 id="ttest">시간</h1>
+    <script>
+        let time = new Date().getHours();
+        let msg;
+        document.getElementById("time").innerHTML = "TIME: " + time;
+        if (time<12)
+        {msg =" Good Morning ☀️";}
+        else if (time<18)
+        {msg = "Good Afternoon 🍱";}
+        else
+        {msg = "Good Night 🌙";}
+        document.getElementById("ttest").innerHTML = msg;
+    </script>
+    <script>
+        let i = 0;
+        while (i < 10)
+        {
+            document.write("카운터 : " + i + "<br />");
+        i++;}
+
+        for(i=0;i<10;i++)
+        {
+        document.write("Count: "+ "<H"+i+">Header" +i);
+        }
+
+        for(i=0;i<10;i++)
+        {
+            document.write("<H"+i+">"+"For test:T"+i);
+        }
+    </script>
+    <hr>
+    <script>
+        let qw = "";
+        for (let i = 0; i < 10; i++)
+        {
+        if (i == 3) break;
+        qw += i + "<br>";
+        }
+        document.write(qw);
+
+        let er = "";
+        for (let i = 0; i < 10; i++) 
+        {
+        if (i == 3) continue;
+        er += i + " ";
+        }
+        document.write(er);
+    </script>
+
+    <h1 id="test1"></h1>
+    <script>
+        let day = new Date().getDay();
+        switch (day) {
+        case 0:
+        case 6:
+        day = "주말";
+        break;
+        case 1:
+        case 2:
+        case 3:
+        case 4:
+        case 5:
+        day = "주중";
+        break;
+        }
+        document.getElementById("test1").innerHTML = "오늘은 " + day + "입니다";
+    </script>
+
+    <hr>
+    <button onclick="showDialog()">대화상자오픈</button> <br>
+    <button onclick="greeting('이서아🎀', '사장')">눌러보세요!</button> <br>
+    
+</body>
+</html>

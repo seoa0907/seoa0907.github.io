@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function gugudan()
+            {
+                let dan = prompt("단 입력: ");
+                result="";
+                for (let i = 1; i <= 9; i++) {
+                    result += dan+"*"+i+"="+dan*i+"<br>";
+                }
+                document.getElementById("gugudan").innerHTML = result;
+            }
+    </script>
+</head>
+<body>
+    <h1>구구단 만들기</h1>
+    <script>
+    for (let dan=2; dan<=9; dan++){
+        document.write(dan+"단<br>");
+        for (let i = 1; i <= 9; i++)
+        {
+            document.write(dan + "*" + i + "=" + dan*i + "<br>")
+        }
+        document.write("<hr>");
+    }
+    document.write("<h1>구구단표</h1>");
+    document.write("<table border=1 width=30%");
+    for (let i = 1; i <= 9; i++) {
+    document.write("<tr>");
+    document.write("<td>" + i + "</td>");
+    for (let j = 2; j <= 9; j++) {
+    document.write("<td>" + i * j + "</td>");
+    }
+    document.write("</tr>");
+    }
+    document.write("</table>");
+    </script>
+
+    <hr>
+    <button onclick="showDialog()">대화상자오픈</button> <br>
+    <button onclick="greeting('이서아🎀', '사장')">눌러보세요!</button> <br>
+    <button onclick="gugudan()">구구단</button>
+    <div id="gugudan">구구단 출력 자리</div>
+</body>
+</html>
