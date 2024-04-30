@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function checkID(){
+            let s = document.getElementById("id").value;
+            if (s.length < 6)
+            alert("아이디는 6글자 이상이어야 합니다!");
+        }
+    </script>
+</head>
+<body>
+    <script>
+        let d = new Date();
+        let d1 = new Date(2024, 4, 30, 14, 30);
+        let d2 = new Date("April 30, 2024 14:24:00");
+        document.write(d + "<br>");
+        document.write(d1 + "<br>");
+        document.write(d2 + "<br>");
+        document.write(d1.getFullYear()+"년"+"<br>");
+        document.write(d1.getMonth()+"월"+"<br>");
+        document.write(d1.getDate()+"일"+"<br>");
+        document.write(d2.getHours()+"시"+"<br>");
+        document.write(d2.getMinutes()+"분"+"<br>");
+        document.write(d2.setDate()+"<br>");
+    </script>
+    <br>
+    <script>
+        let date1 = new Date("04/30/2024");
+        let date2 = new Date("12/25/2024");
+        let diff = date2 - date1;
+        let diff_days = diff/(1000 * 3600 * 24);
+
+        document.write(
+            date1 + "와 <br>"
+            + date2 + "<br> -> 날짜 간의 총 일수: "
+            + diff_days);
+    </script>
+    <h2 id="clock"></h2>
+    <script>
+        function setClock(){
+            let now = new Date();
+            let s = now.getHours() + ':' + now.getMinutes() + ':' + now.getSeconds();
+            document.getElementById('clock').innerHTML = s;
+
+            setTimeout('setClock()', 1000);
+        }
+        setClock();
+    </script>
+    <script>
+        let sLiteral = "문자열 리터럴";
+        sObject = new String("문자열 객체");
+        document.write(typeof(sLiteral) + "<br>"); //string
+        document.write(typeof(sObject) + "<br>"); //object
+    </script>
+    아이디: <input type = "text" id="id" size="10">
+    <button onclick="checkID(0)">검사</button>
+</body>
+</html>
