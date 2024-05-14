@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function change()
+        {
+            let p = document.getElementById("dog");
+            p.innerHTML = "나의 <img src='images/bella.jpg'> 강아지";
+        }
+        function change1(obj, size, color)
+        {
+            obj.style.color = color;
+            obj.style.fontSize = size;
+        }
+    </script>
+    <h3>
+        innerHTML 활용 : 아래 글자를 클릭하면 예쁜 강아지가 보입니다.
+    </h3>
+    <hr>
+    <p id="dog" style = "color:green" onclick="change()">
+        여기에 <span style = "color:pink"> 클릭하세요</span> 
+    </p>
+    <button onclick="change1(this, '50px', 'purple')">버튼</button> <br>
+    <button onclick="change1(this, '40px', 'red')">버튼2</button> <br>
+    <div onclick="change1(this, '60px', 'pink')">여기 클릭하면 크기와 색 변경</div> <br>
+    <button onclick="change1(this, '70px', 'blue')">여기 클릭하면 크기와 색 변경</button> 
+</body>
+</html>
