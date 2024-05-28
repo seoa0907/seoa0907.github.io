@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function process() { 
+        let obj = document.myform.text1;
+        alert(obj.value + "제출되었습니다!");}
+    </script>
+    <script>
+        function getTextAreaValue() {
+        let s;
+        s = document.getElementById("textArea").value;
+        document.getElementById("result").value = s;
+        }
+    </script>
+    <script>
+        function get() {
+        if (document.getElementById("myCheckBox").checked) {
+        document.getElementById("result1").value = "동의하셨습니다.";
+        } else {
+        document.getElementById("result1").value = "동의하지 않으셨습니다.";
+        }
+        }
+    </script>
+    <script>
+        function getValue() {
+        let list = document.getElementsByName('color');
+        for (let i = 0; i < list.length; i++) {
+        if (list[i].checked) {
+        document.getElementById("result3").value = list[i].value;
+        break;
+        }
+        }
+        }
+        </script>
+    <script>
+        function getValue() {
+            let selected, s;
+            selected = document.getElementById("myList").selectedIndex;
+            s = document.getElementById("myList").options[selected].value;
+            document.getElementById("result4").value = s;
+            }
+    </script>
+</head>
+<body>
+    <form name="myform">
+        <input type="text" id="target" name="text1">
+        <input type="submit" value="제출" onclick="process()">
+    </form>
+    <TEXTAREA id="textArea" rows=5 cols=20>This is a TextArea.</TEXTAREA>
+    <input type="button" onClick="getTextAreaValue();" value="클릭">
+    <TEXTAREA id="result" rows=5 cols=20></TEXTAREA> <br>
+
+    <input type="checkbox" id="myCheckBox">동의합니다.<br>
+    <input type="button" onClick="get();" value="클릭">
+    <input type="text" id="result1" value=""> <br>
+
+    <input type="radio" name="color" CHECKED value="red">RED<BR>
+    <input type="radio" name="color" value="blue">BLUE<BR>
+    <input type="radio" name="color" value="green">GREEN<BR>
+    <input type="button" onClick="getValue();" value="클릭">
+    <input type="text" id="result3" value=""> <br>
+
+    <select id="myList">
+        <option value="학생">학생</option>
+        <option value="직장인" SELECTED>직장인</option>
+        <option value="전문직">전문직</option>
+        <option value="무직">무직</option>
+        </select>
+        <input type="button" onClick="getValue()" value="클릭">
+        <input type="text" id="result4" value="">
+</body>
+</html>
