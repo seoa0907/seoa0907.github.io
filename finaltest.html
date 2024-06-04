@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function process() { 
+        let obj = document.myform.text1;
+        alert("등업신청 완료!");}
+    </script>
+    <script>
+        function check()
+        {
+            alert("제출되었습니다.");
+        }
+    </script>
+    <script>
+        function process() { 
+        let obj = document.myform.text1;
+        alert(obj.value + "등록되었습니다!");}
+    </script>
+     <script>
+        function get() {
+        if (document.getElementById("myCheckBox").checked) {
+        document.getElementById("result1").value = "동의하셨습니다.";
+        } else {
+        document.getElementById("result1").value = "동의하지 않으셨습니다.";
+        }
+        }
+    </script>
+</head>
+<body>
+    <style>
+    html, body { margin: 0; padding: 0; height: 100%; }
+header { width: 100%; height: 13%;
+background: rgb(198, 230, 188); text-align: center; }
+nav { width: 100%; height: 9%; float: left;
+background: rgb(198, 230, 188); text-align: center;}
+section { width: 100%; height: 100%; float: left;
+background: rgb(227, 245, 229); font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; }
+footer { width: 100%; height: 10%; clear: both;
+background: rgb(235, 207, 211); text-align: left;}
+.left{
+    float: left;
+}
+ol.circle{list-style: circle;}
+ol.circle{
+text-align: center;
+padding: 3px
+}
+.circle li{
+display: inline;
+text-transform: uppercase;
+padding: 20px;
+letter-spacing: 4px;
+}
+.circle li a{
+text-decoration: none;
+color: black;
+}
+.circle li a:hover{
+text-decoration:underline;
+}
+#test{
+    float: right;
+}
+#login{
+    float: right; 
+}
+#ahrck{
+    float: left;
+}
+table{clear: both;
+    width: 800px;}
+.wkdb{
+    float: left;
+    margin-left: 5px;
+}
+.emddjq{
+    float: right;
+    margin-right: 300px;
+}
+.flqb{
+    float: right;
+    margin-right: 352px;
+}
+.thxhd{
+    float: right;
+    margin-right: 148px;
+}
+.eotrmf{
+    width: 400px;
+    height: 120px;
+    border: 1.5px solid rgb(179, 184, 245);
+    margin-top: 20px;
+    padding: 5px;
+}
+.dd{
+    text-align: center;
+}
+
+</style>
+<header>
+    <div>        
+        <img class="left" src="images/food.jpg" alt="" width="230" height="165">
+        <br>
+        <br>   
+        <h1> 다이어트로 이루는 우리의 꿈 </h1> 
+        <h4>🍀 이제 다이어트는 지금, 이 순간부터 🍀</h4>
+    
+    </div>
+</header>
+<nav>
+    <h3 id="login">👉로그인👈<br>
+            아이디 :  <input type="text" id="id"> <br>
+            비밀번호 :  <input type="password"  id="id">
+            <button onclick="checkID(0)">확인</button></h3>
+    <script>
+        function checkID(){
+            let s = document.getElementById("id").value;
+                if (s.length < 6)
+                    alert("환영합니다 😊");
+                }
+    </script>
+    <h3 id="ahrck">
+        <ol class="circle">
+            <li>1️⃣<a href="#num1">자유게시판</a></li>
+            <li>2️⃣<a href="#num2">등업게시판</a></li>
+            <li>3️⃣<a href="#num3">리뷰게시판</a></li>
+            <li>4️⃣<a href="#num4">소통방</a></li>
+        </ol>
+    </h3>
+</nav>
+<section>
+    <div class="wkdb">
+       <h2 id="num1">1️⃣ 자유게시판</h2>
+        <table border="1"> 
+            <tr>                
+                <td><a href="https://www.youtube.com/watch?v=NP5vh3RZlIM"><img src="images/dish11.jpg" alt="" width="320px" height="180px"></a></td>
+                <td><h4>📍 영양만점에 맛도 있는 양배추 요리!</h4>양배추를 포함하여 라이스페이퍼에 싸 먹는 요리를 소개합니다😋 
+                    계란과 두부를 넣고 입맛에 따라 당근이나 호박 등 다양한 채소를 넣어먹으면 간단한 다이어트 요리 뚝딱!
+                </td>
+            </tr>      
+        </table> 
+        <br>
+        <table border="1"> 
+            <tr>                
+                <td><a href="https://www.youtube.com/watch?v=Nk5v-CcIRhQ&list=UULPQg7opkHC1IIHYsIRuivMbw&index=2"><img src="images/dish2.jpg" alt="" width="320px" height="180px"></a></td>
+                <td><h4>📍 간단한 오이 샐러드와 토스트!</h4>아침식사로 속은 편하게 배는 든든하게 먹을 수 있는 오이 요리를 소개합니다😋 <br>
+                    그릭 요거트의 유산균과 오이의 식이섬유가 만나 장 건강에도 굿! 
+                    <h5>재료 : 오이, 소금, 마늘, <a href="https://www.youtube.com/watch?v=YWz03CnKvSc&t=0s">그릭요거트</a>, 올리브오일, 레몬, 쪽파</h5>
+                </td>
+            </tr>      
+        </table>
+        <br>
+        <table border="1"> 
+            <tr>                
+                <td><a href="https://www.youtube.com/watch?v=OWEGBnEcTmc"><img src="images/pancake.PNG" alt="" width="320px" height="180px"></a></td>
+                <td><h4>📍 건강에 좋은 식단, 두부 팬케이크!</h4>두부와 계란에 영양 가득한 채소를 넣어 항암, 혈관, 당뇨, 고혈압에 좋은 식단을 소개햡
+                    하루 한 끼 밥 대신 2주간 매일 건강식으로 먹는다면 피부톤이 달라지고 몸매 관리로도 짱!
+                    <h5>재료 : 두부, 계란, 당근, 브로콜리, 양파, 소금, 후추</h5>
+                </td>
+            </tr>      
+        </table> 
+    </div>
+
+
+    <div class="emddjq">        
+
+    <h2 id="num2">2️⃣ 등업게시판</h2>
+      ✅ 아이디 입력 <br> <input type = "text" id="dkdlel" size="10">
+    <button onclick="checkID()">글자수 검사</button> <br>
+    <script>
+        function checkID(){
+            let s = document.getElementById("dkdlel").value;
+                if (s.length < 7)
+                alert("아이디는 6글자 이상이어야 합니다!");
+                else (s.length > 8)
+                alert("검사가 완료 되었습니다. 등업신청을 진행해주세요!");
+            }
+    </script>    
+      ✅ 검사 후 아이디: <form name="myform"> 
+        <input type="text" id="target" name="text1">    
+        <input type="submit" value="등업신청" onclick="process()">  <br>
+        <img src="images/goldvip.jpg" alt="">
+
+    </div>
+     
+    <div class="flqb">
+        <h2 id="num3">3️⃣ 리뷰게시판</h2>
+        <h3>🍀 자유롭게 쓰셔도 됩니다 🍀</h3>
+        <textarea name="review" id="" cols="50" rows="10"></textarea>
+        <button onclick="check()">제출</button>
+       <h3>만족도 조사
+            <select id="myList">
+                <option value="학생">학생</option>
+                <option value="직장인" SELECTED>직장인</option>
+                <option value="전문직">전문직</option>
+                <option value="무직">무직</option>
+            </select>
+        </h3>
+        <input type="radio" name="gender" value="제출완료"> 매우 만족
+        <input type="radio" name="gender" value="제출완료"> 만족
+        <input type="radio" name="gender" value="제출완료"> 보통
+        <input type="radio" name="gender" value="제출완료"> 불만족 
+        <input type="radio" name="gender" value="제출완료"> 매우 불만족
+        <input type="button" onClick="getValue();" value="확인">
+        <input type="text" id="result3" value=""> 
+        <script>
+            function getValue() {
+            let list = document.getElementsByName('gender');
+            for (let i = 0; i < list.length; i++) {
+            if (list[i].checked) {
+            document.getElementById("result3").value = list[i].value;
+            break;
+            }
+            }
+            }
+        </script> <br>
+ 
+    </div>
+        
+    <div class="thxhd">
+        <h2 id="num4">4️⃣ 소통방</h2>
+        <input type="button" id="" value="인기순" name="btn1" onclick="check">
+        <input type="button" id="" value="최신순" name="btn1" onclick="check">
+        <h3>👧 토심토뭉이</h3> 
+        좋은 정보 많이 얻고 갑니다!! 
+        <h3>👦 마성의 팍수</h3>
+        가족들한테도 이 홈페이지 소개시켜줘야겠어요 :)
+        <h3>🧒 그래도살은빼야지</h3>
+        어떤 재료를 써야하는지도 나와있어서 따로 찾아볼 수고는 덜었어요! <br>
+        여기 가입하기 전까지는 혼자 다이어트 한다는 생각에 울적했는데 저와 같은 사람들이 있다는게 든든하고 의지가 되네용
+        <br>
+        <div class="eotrmf">
+          <h4>댓글을 남겨주세요</h4>
+            <form name="myform">
+                <input type="text" id="target" name="text1" cols="30" rows="10">
+                <input type="submit" value="등록" onclick="process()">
+            </form>   
+        </div>
+        
+
+
+    </div>
+
+</section>
+<footer class="dd">
+    <h3>개인정보수집 동의 여부</h3>
+    <input type="checkbox" id="myCheckBox">동의합니다.
+        <input type="button" onClick="get();" value="클릭"> <br>
+        <input type="text" id="result1" value="">
+</footer>
+</body>
+</html>
+
